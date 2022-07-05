@@ -13,6 +13,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 // 설정 정보에 configuration을 붙임.
+// spring이 이 악물고 싱글톤 보장해 줌.
+// AppConfig@CGLIB라는 새로운 AppConfig를 상속하는 클래스를 만들어서 싱글톤을 보장함.
+// Configuration 어노테이션을 빼면 싱글톤 컨테이너가 적용이 안됨.
 @Configuration
 public class AppConfig {
     // 어떤 구현체를 쓸지 한눈에 볼 수 있음.
@@ -47,3 +50,4 @@ public class AppConfig {
 
 
 }
+
